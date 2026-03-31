@@ -110,15 +110,15 @@ Frontend esperado em: `http://localhost:5173`
 ### Frontend (`frontend/package.json`)
 - `npm run dev` - inicia ambiente de desenvolvimento
 
-## Objetivo de portfolio
+## Objetivo de portfólio
 
-Este repositorio faz parte da minha evolucao como desenvolvedor iniciante, com foco em:
+Este repositório faz parte da minha evolução como desenvolvedor iniciante, com foco em:
 
-- Integracao entre API REST e interface React
-- Organizacao de codigo em componentes e camadas
-- Boas praticas progressivas de desenvolvimento
+- Integração entre API REST e interface React
+- Organização de código em componentes e camadas
+- Boas práticas progressivas de desenvolvimento
 
-Feedbacks e sugestoes são bem-vindos.
+Feedbacks e sugestões são bem-vindos.
 =======
 
 ## Objetivo de portfólio
