@@ -1,6 +1,14 @@
+<<<<<<< HEAD
 # Gestao de Hardware
 
 Projeto full stack para gestao de inventario de hardware, desenvolvido para portfolio e estudos de integracao entre frontend e backend.
+=======
+# 🖥️ Gestão de Hardware - Full Stack
+
+![Status](https://img.shields.io/badge/Status-Em%20Desenvolvimento-orange)
+
+Sistema para controle de inventário de hardware, conectando uma interface React a uma API Node.js com persistência em MongoDB via Prisma.
+>>>>>>> ab566349b52e5130ffce6e35c440120aa3f83e07
 
 > Status: **em desenvolvimento**  
 > Novas features e melhorias de qualidade estao sendo implementadas continuamente.
@@ -12,9 +20,15 @@ Este projeto permite cadastrar e visualizar componentes de hardware, com filtro 
 Estrutura atual do repositorio:
 
 ```txt
+<<<<<<< HEAD
 gestao-hardware/
   backend/
   frontend/
+=======
+gestao-hardware
+|-- backend/
+|-- frontend/
+>>>>>>> ab566349b52e5130ffce6e35c440120aa3f83e07
 ```
 
 ## Stack utilizada
@@ -42,10 +56,17 @@ gestao-hardware/
 
 ## Próximas melhorias (roadmap)
 
+<<<<<<< HEAD
 - [ ] Edicao de hardware no frontend
 - [ ] Exclusao de hardware no frontend
 - [ ] Melhor tratamento de erros para usuario
 - [ ] Validacoes mais robustas no backend
+=======
+- [ ] Edição de hardware no frontend
+- [ ] Exclusão de hardware no frontend
+- [ ] Melhor tratamento de erros para usuário
+- [ ] Validações mais robustas no backend
+>>>>>>> ab566349b52e5130ffce6e35c440120aa3f83e07
 - [ ] Testes automatizados
 - [ ] Deploy completo (frontend + backend)
 
@@ -54,7 +75,11 @@ gestao-hardware/
 ### 1) Clone o projeto
 
 ```bash
+<<<<<<< HEAD
 git clone https://github.com/SEU_USUARIO/gestao-hardware.git
+=======
+git clone https://github.com/gabrieltomazi/gestao-hardware.git
+>>>>>>> ab566349b52e5130ffce6e35c440120aa3f83e07
 cd gestao-hardware
 ```
 
@@ -99,6 +124,7 @@ Frontend esperado em: `http://localhost:5173`
 
 ### Frontend (`frontend/package.json`)
 - `npm run dev` - inicia ambiente de desenvolvimento
+<<<<<<< HEAD
 - `npm run build` - gera build de producao
 - `npm run lint` - executa lint
 - `npm run preview` - preview da build
@@ -112,3 +138,15 @@ Este repositorio faz parte da minha evolucao como desenvolvedor iniciante, com f
 - Boas praticas progressivas de desenvolvimento
 
 Feedbacks e sugestoes sao bem-vindos.
+=======
+
+## Objetivo de portfólio
+
+Este repositório faz parte da minha evolução como desenvolvedor iniciante, com foco em:
+
+- Integração entre API REST e interface React
+- Organização de código em componentes e camadas
+- Boas práticas progressivas de desenvolvimento
+
+Feedbacks e sugestões são bem-vindos.
+>>>>>>> ab566349b52e5130ffce6e35c440120aa3f83e07
