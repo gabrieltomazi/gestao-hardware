@@ -7,7 +7,7 @@ Sistema para controle de inventário de hardware, conectando uma interface React
 > Status: **em desenvolvimento**  
 > Novas features e melhorias de qualidade estao sendo implementadas continuamente.
 
-## Visao geral
+## Visão geral
 
 Este projeto permite cadastrar e visualizar componentes de hardware, com filtro por categoria e busca por nome.
 
@@ -42,9 +42,9 @@ gestao-hardware
 - Filtro por categoria
 - Interface organizada em componentes
 
-## Proximas melhorias (roadmap)
+## Próximas melhorias (roadmap)
 
-- [ ] Edicao de hardware no frontend
+- [ ] Edição de hardware no frontend
 - [ ] Exclusão de hardware no frontend
 - [ ] Melhor tratamento de erros para usuário
 - [ ] Validações mais robustas no backend
@@ -102,7 +102,7 @@ Frontend esperado em: `http://localhost:5173`
 ### Frontend (`frontend/package.json`)
 - `npm run dev` - inicia ambiente de desenvolvimento
 
-## Objetivo de portfolio
+## Objetivo de portfólio
 
 Este repositório faz parte da minha evolução como desenvolvedor iniciante, com foco em:
 
