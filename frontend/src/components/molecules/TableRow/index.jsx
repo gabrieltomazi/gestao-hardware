@@ -5,7 +5,7 @@ import { FaRegTrashAlt } from "react-icons/fa";
 import { FaPen } from "react-icons/fa";
 import formatPrice from '../../../utils/formatPrice.js'
 
-export const TableRow = ({ item, handleModal }) => {
+export const TableRow = ({ item, handleModal, handleDelete }) => {
 
 
   return (
@@ -21,7 +21,7 @@ export const TableRow = ({ item, handleModal }) => {
             <FaPen />
           </Button>
 
-          <Button $variant='danger'>
+          <Button $variant='danger' onClick={() => handleDelete(item.id)}>
             <FaRegTrashAlt />
           </Button>
 

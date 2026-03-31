@@ -2,7 +2,7 @@ import { TableRow } from '../../molecules/TableRow'
 import { Container, StyledTable, Thead } from "./style"
 import { InputsRow } from "../../molecules/InputsRow"
 
-export function HardwareTable({ onSearchChange, handleFilterChange, hardwares, filter, handleModal }) {
+export function HardwareTable({ onSearchChange, handleFilterChange, hardwares, filter, handleModal, handleDelete }) {
 
 
   return (
@@ -26,7 +26,12 @@ export function HardwareTable({ onSearchChange, handleFilterChange, hardwares, f
         <tbody>
           {hardwares.length > 0 ? (
             hardwares.map((item) => (
-              <TableRow key={item.id} item={item} handleModal={handleModal} />
+              <TableRow
+                key={item.id}
+                item={item}
+                handleModal={handleModal}
+                handleDelete={handleDelete}
+              />
             ))
           ) : (
             <tr>

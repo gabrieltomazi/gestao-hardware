@@ -13,6 +13,20 @@ export function Dashboard() {
   const [hardwares, setHardwares] = useState([])
   const [filter, setFilter] = useState('All');
 
+  const handleDelete = async (id) => {
+
+    const response = window.confirm("Você tem certeza que quer deletar este hardware?")
+
+    if (response) {
+      try {
+        await api.delete(`/${id}`)
+        fetchHardwares();
+        alert("Hardware excluído com sucesso!")
+      } catch (error) {
+        console.error("Erro ao deletar hardware", error)
+      }
+    }
+  }
   const handleSearchChange = (e) => {
     setSearch(e.target.value)
   }
@@ -72,6 +86,7 @@ export function Dashboard() {
           hardwares={hardwares}
           handleModal={handleModal}
           filter={filter}
+          handleDelete={handleDelete}
         />
 
       </Content>
