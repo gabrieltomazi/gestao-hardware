@@ -51,7 +51,7 @@ gestao-hardware
 
 ## Próximas melhorias (roadmap)
 
-- [ ] Edição de hardware no frontend
+- [X] Edição de hardware no frontend
 - [ ] Exclusão de hardware no frontend
 - [ ] Melhor tratamento de erros para usuário
 - [ ] Validações mais robustas no backend
