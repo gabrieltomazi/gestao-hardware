@@ -63,11 +63,8 @@ gestao-hardware
 ### 1) Clone o projeto
 
 ```bash
-<<<<<<< HEAD
 git clone https://github.com/SEU_USUARIO/gestao-hardware.git
-=======
 git clone https://github.com/gabrieltomazi/gestao-hardware.git
->>>>>>> ab566349b52e5130ffce6e35c440120aa3f83e07
 cd gestao-hardware
 ```
 
@@ -112,10 +109,6 @@ Frontend esperado em: `http://localhost:5173`
 
 ### Frontend (`frontend/package.json`)
 - `npm run dev` - inicia ambiente de desenvolvimento
-<<<<<<< HEAD
-- `npm run build` - gera build de producao
-- `npm run lint` - executa lint
-- `npm run preview` - preview da build
 
 ## Objetivo de portfolio
 
@@ -137,4 +130,3 @@ Este repositório faz parte da minha evolução como desenvolvedor iniciante, co
 - Boas práticas progressivas de desenvolvimento
 
 Feedbacks e sugestões são bem-vindos.
->>>>>>> ab566349b52e5130ffce6e35c440120aa3f83e07
