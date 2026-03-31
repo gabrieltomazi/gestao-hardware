@@ -5,7 +5,7 @@ import { FaRegTrashAlt } from "react-icons/fa";
 import { FaPen } from "react-icons/fa";
 import formatPrice from '../../../utils/formatPrice.js'
 
-export const TableRow = ({ item }) => {
+export const TableRow = ({ item, handleModal }) => {
 
 
   return (
@@ -17,7 +17,7 @@ export const TableRow = ({ item }) => {
       <Td>
         <DivAction>
 
-          <Button>
+          <Button onClick={() => handleModal(item)} >
             <FaPen />
           </Button>
 

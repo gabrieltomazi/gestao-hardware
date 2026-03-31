@@ -8,6 +8,7 @@ import api from '../../services/api';
 
 export function Dashboard() {
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [editingHardware, setEditingHardware] = useState(null)
   const [search, setSearch] = useState('');
   const [hardwares, setHardwares] = useState([])
   const [filter, setFilter] = useState('All');
@@ -20,9 +21,18 @@ export function Dashboard() {
     setFilter(newFilter)
   }
 
-  const handleModal = () => {
-    setIsModalOpen(prevState => !prevState)
+  const handleModal = (hardware = null) => {
+    setEditingHardware(hardware)
+    setIsModalOpen(prev => !prev)
   }
+
+  const closeModal = () => {
+    setIsModalOpen(false)
+    setEditingHardware(null)
+  }
+
+
+
 
   async function fetchHardwares() {
     const params = filter !== 'All' ? { category: filter } : {};
@@ -46,8 +56,9 @@ export function Dashboard() {
       <Content>
         {isModalOpen && (
           <AddHardwareForm
-            handleModal={handleModal}
+            handleModal={closeModal}
             onSuccess={fetchHardwares}
+            editingHardware={editingHardware}
           />
         )}
         <Header>
@@ -59,6 +70,7 @@ export function Dashboard() {
           onSearchChange={handleSearchChange}
           handleFilterChange={handleFilterChange}
           hardwares={hardwares}
+          handleModal={handleModal}
           filter={filter}
         />
 

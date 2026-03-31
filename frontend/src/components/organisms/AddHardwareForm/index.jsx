@@ -1,17 +1,32 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import { Category, Container, Content, DivButtons, Name, Price, Title } from "./style";
 import { Button } from "../../atoms/Button";
 import api from "../../../services/api.js"
 
 
 
-export const AddHardwareForm = ({ handleModal, onSuccess }) => {
+export const AddHardwareForm = ({ handleModal, onSuccess, editingHardware }) => {
 
   const [fields, setFields] = useState({
-    name: '',
-    category: '',
-    price: ''
+    name: editingHardware?.name || '',
+    category: editingHardware?.category || '',
+    price: editingHardware?.price || ''
   });
+
+
+  useEffect(() => {
+    console.log("Hardware recebido para edição: ", editingHardware)
+    if (editingHardware) {
+
+      setFields({
+        name: editingHardware.name,
+        category: editingHardware.category,
+        price: editingHardware.price,
+      })
+    } else {
+      setFields({ name: '', category: '', price: '' })
+    }
+  }, [editingHardware])
 
 
   const handleChange = (e) => {
@@ -23,7 +38,7 @@ export const AddHardwareForm = ({ handleModal, onSuccess }) => {
 
   }
 
-  const handleAddHardware = async () => {
+  const handleSaveHardware = async () => {
     if (!fields.name || !fields.category || !fields.price) {
       alert("por favor, preencha todos os campos!")
       return;
@@ -37,7 +52,9 @@ export const AddHardwareForm = ({ handleModal, onSuccess }) => {
         category: fields.category,
         price: parseFloat(fields.price)
       }
-      await api.post('/', hardware)
+
+      if (editingHardware) await api.put(`/${editingHardware.id}`, hardware)
+      else await api.post('/', hardware)
 
       if (onSuccess) await onSuccess();
 
@@ -90,8 +107,12 @@ export const AddHardwareForm = ({ handleModal, onSuccess }) => {
           />
 
         </Price>
-        <DivButtons>
-          <Button onClick={handleAddHardware} >Adicionar</Button>
+        <DivButtons >
+
+          <Button onClick={handleSaveHardware}>
+            {editingHardware ? 'Salvar Alterações' : 'Adicionar'}
+          </Button>
+
           <Button $variant='danger' onClick={handleModal}>Cancelar</Button>
         </DivButtons>
       </Content>
