@@ -8,7 +8,11 @@ import api from '../../services/api';
 
 export function Dashboard() {
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [editingHardware, setEditingHardware] = useState(null)
+  const [editingHardware, setEditingHardware] = useState({
+    name: '',
+    category: '',
+    price: ''
+  });
   const [search, setSearch] = useState('');
   const [hardwares, setHardwares] = useState([])
   const [filter, setFilter] = useState('All');
@@ -77,7 +81,7 @@ export function Dashboard() {
         )}
         <Header>
           <Title>Inventário de Hardwares</Title>
-          <Button onClick={handleModal} >Add new Hardware +</Button>
+          <Button onClick={() => handleModal(null)} >Add new Hardware +</Button>
         </Header>
 
         <HardwareTable

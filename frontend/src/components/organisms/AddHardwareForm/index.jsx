@@ -7,6 +7,7 @@ import api from "../../../services/api.js"
 
 export const AddHardwareForm = ({ handleModal, onSuccess, editingHardware }) => {
 
+
   const [fields, setFields] = useState({
     name: editingHardware?.name || '',
     category: editingHardware?.category || '',
@@ -15,9 +16,7 @@ export const AddHardwareForm = ({ handleModal, onSuccess, editingHardware }) => 
 
 
   useEffect(() => {
-    console.log("Hardware recebido para edição: ", editingHardware)
     if (editingHardware) {
-
       setFields({
         name: editingHardware.name,
         category: editingHardware.category,
