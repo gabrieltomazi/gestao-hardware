@@ -1,4 +1,4 @@
-import { Button, Container } from "./style"
+import { Container, Select } from "./style"
 
 
 export const FilterInput = ({ activeCategory, onFilterChange }) => {
@@ -10,7 +10,21 @@ export const FilterInput = ({ activeCategory, onFilterChange }) => {
     <Container>
 
       <p>Filtrar por categoria</p>
-      <div>
+      <Select
+        onChange={(e) => onFilterChange(e.target.value)}
+        $item={activeCategory}
+      >
+
+
+        {categories.map(category => (
+          <option
+            key={category}
+            value={category}
+          >{category}</option>
+        ))}
+      </Select>
+
+      {/* <div>
         {categories.map(category => (
           <Button
             onClick={() => onFilterChange(category)}
@@ -20,7 +34,7 @@ export const FilterInput = ({ activeCategory, onFilterChange }) => {
             {category}
           </Button>
         ))}
-      </div>
+      </div> */}
     </Container>
   )
 
