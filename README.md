@@ -2,7 +2,7 @@
 # Gestão de Hardware
 
 ## Projeto full stack para gestão de inventário de hardware, desenvolvido para portfólio e estudos de integração entre frontend e backend.
-=======
+---
 # 🖥️ Gestão de Hardware - Full Stack
 
 ![Status](https://img.shields.io/badge/Status-Em%20Desenvolvimento-orange)
