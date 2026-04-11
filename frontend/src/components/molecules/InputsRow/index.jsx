@@ -16,10 +16,6 @@ export function InputsRow({ activeCategory, onFilterChange, onSearchChange }) {
         activeCategory={activeCategory}
         onFilterChange={onFilterChange}
       />
-      <Input>
-        Ordenar
-        <FaArrowDownWideShort />
-      </Input >
     </Container>
   )
 }
