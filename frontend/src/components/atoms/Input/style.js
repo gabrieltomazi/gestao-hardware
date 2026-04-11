@@ -3,10 +3,17 @@ import styled from 'styled-components'
 
 export const Container = styled.div`
   display: flex;
-  align-self: center;
-  border: 1px solid black;
-  padding: 5px;
-  border-radius: 5px;
-  gap: 5px;
+  padding: 10px;
+  background-color: #E4EBF5;
 
+`
+
+export const InputContainer = styled.div`
+  display: flex;
+  gap: 10px;
+  input{
+    border: none;
+    outline: none;
+    background: none;
+  }
 `
