@@ -1,4 +1,6 @@
 import prisma from "../config/prisma.js";
+import z from 'zod'
+import { buildValidationErrorMessage } from '../utils/build-validation-error-message.util.js'
 
 export const HardwareController = {
   // Listar
@@ -23,17 +25,35 @@ export const HardwareController = {
 
   // Criar
   async create(req, res) {
+
+    console.log(req.body)
+
+    const { name, category, price } = req.body
+    const schema = z.object({
+      name: z.string(),
+      category: z.string(),
+      price: z.number()
+    })
+
+    const validated = schema.safeParse(req.body)
+
+    if (!validated.success) {
+      const errors = buildValidationErrorMessage(validated.error.issues)
+      return res.status(422).json({ message: errors })
+    }
+
     try {
       const component = await prisma.component.create({
         data: {
-          name: req.body.name,
-          category: req.body.category,
-          price: req.body.price,
+          name,
+          category,
+          price,
         },
       });
+      console.log(component)
       res.status(201).json({ message: "Component created", component });
     } catch (error) {
-      res.status(400).json({ error: "Erro ao criar o Componente" });
+      res.status(400).json({ error: "Erro ao criar o Componente", error });
     }
   },
 
