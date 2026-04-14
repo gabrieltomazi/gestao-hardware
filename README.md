@@ -63,7 +63,6 @@ gestao-hardware
 ### 1) Clone o projeto
 
 ```bash
-git clone https://github.com/SEU_USUARIO/gestao-hardware.git
 git clone https://github.com/gabrieltomazi/gestao-hardware.git
 cd gestao-hardware
 ```
